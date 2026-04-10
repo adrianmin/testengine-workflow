@@ -13,15 +13,6 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-
-  Validate-Design-on-Swaggerhub:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - name: Use Nodejs 22.x
-        uses: actions/setup-node@v1
-        with:
-          node-version: "22.x"
   
   Run-Regression-Tests:
     # The type of runner that the job will run on
@@ -29,7 +20,7 @@ jobs:
     steps:
         # Checks-out your repository under $GITHUB_WORKSPACE, so job can access it and uses the Node setup
         - uses: actions/checkout@v2
-        - name: Use Nodejs 12.x
+        - name: Use Nodejs 22.x
           uses: actions/setup-node@v1
           with:
             node-version: "22.x"
