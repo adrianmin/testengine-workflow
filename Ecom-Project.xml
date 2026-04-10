@@ -1,0 +1,688 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="3e74adc2-318b-47c1-b034-19bbe5d33688" activeEnvironment="Default environment" name="EcomProject" resourceRoot="" soapui-version="5.9.1" encryptionMode="Not encrypted" projectVersion="" updated="3.65.0 2026-01-22T10:17:35Z" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings/>
+  <con:interface xsi:type="con:RestService" id="2bbcf7be-1886-46ed-8813-409eaf6c5386" wadlVersion="http://wadl.dev.java.net/2009/02" name="Ecommerce Store" type="rest" basePath="/Adrians_Org/test/1.1.0" lastUpdated="2026-03-11T13:06:20.476Z" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:description>## This is an API definition to be used in an automated design first workflow.
+   We will reuse this API definition to create our functional tests and a virtual API.
+</con:description>
+    <con:settings/>
+    <con:definitionCache type="TEXT" rootPart=""/>
+    <con:endpoints>
+      <con:endpoint>http://virtserver.swaggerhub.com</con:endpoint>
+      <con:endpoint>https://virtserver.swaggerhub.com</con:endpoint>
+    </con:endpoints>
+    <con:resource name="/login/" path="/login/" id="b7fe4d0c-ffdd-4d97-b0ac-e07834176e81">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="GET" id="4efcf20a-87d3-4836-9b1a-a81d842227a4" method="GET">
+        <con:description>Login to user account
+</con:description>
+        <con:settings/>
+        <con:parameters>
+          <con:parameter required="true">
+            <con:name>username</con:name>
+            <con:style>QUERY</con:style>
+            <con:description>The user name for login</con:description>
+          </con:parameter>
+          <con:parameter required="true">
+            <con:name>password</con:name>
+            <con:style>QUERY</con:style>
+            <con:description>The password for login in clear text</con:description>
+          </con:parameter>
+        </con:parameters>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/xml</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>404</con:status>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/xml</con:mediaType>
+          <con:status>404</con:status>
+          <con:params/>
+        </con:representation>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/json</con:mediaType>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json;charset=utf-8</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element>Response</con:element>
+        </con:representation>
+        <con:request name="Request 1" id="ffb8deed-ae03-4842-b954-008f0c1655d1" mediaType="application/json">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>http://virtserver.swaggerhub.com</con:endpoint>
+          <con:request/>
+          <con:originalUri>https://virtserver.swaggerhub.com/Adrians_Org/test/1.1.0/login/</con:originalUri>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters>
+            <con:entry key="password" value="test"/>
+            <con:entry key="username" value="Adrian"/>
+          </con:parameters>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="/logout/" path="/logout/" id="0f0514b2-35ba-4726-bf33-72499e8a1bc3">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="GET" id="c9d01b56-8550-4ddd-83fb-a9f39da65217" method="GET">
+        <con:description>Logout current user
+</con:description>
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/xml</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>404</con:status>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/xml</con:mediaType>
+          <con:status>404</con:status>
+          <con:params/>
+        </con:representation>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/json</con:mediaType>
+          <con:params/>
+        </con:representation>
+        <con:request name="Request 1" id="37de8654-6f2f-4c9a-b02d-5bb25ca11137" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>http://virtserver.swaggerhub.com</con:endpoint>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="/user_details/" path="/user_details/" id="62aed6df-4bf5-4a90-934a-ae693caa4a45">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="GET" id="3ea7db1a-d55d-4ad3-92b7-d4bb6f8f211b" method="GET">
+        <con:description>View user details
+</con:description>
+        <con:settings/>
+        <con:parameters>
+          <con:parameter required="true">
+            <con:name>Authorization</con:name>
+            <con:style>HEADER</con:style>
+            <con:description>Token used for authentication</con:description>
+          </con:parameter>
+        </con:parameters>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/xml</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>404</con:status>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/xml</con:mediaType>
+          <con:status>404</con:status>
+          <con:params/>
+        </con:representation>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/json</con:mediaType>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json;charset=utf-8</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element>Response</con:element>
+        </con:representation>
+        <con:request name="Request 1" id="f04183c9-6869-4f8f-aad8-76a5dd75c38a" mediaType="application/json">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>http://virtserver.swaggerhub.com</con:endpoint>
+          <con:request/>
+          <con:originalUri>https://virtserver.swaggerhub.com/Adrians_Org/test/1.1.0/user_details/</con:originalUri>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters>
+            <entry key="Authorization" value="1" xmlns="http://eviware.com/soapui/config"/>
+          </con:parameters>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="/get_products/{product_id}/" path="/get_products/{product_id}/" id="20c244af-5fe0-49d1-b961-4d15d27b6387">
+      <con:settings/>
+      <con:parameters>
+        <con:parameter required="true">
+          <con:name>product_id</con:name>
+          <con:style>TEMPLATE</con:style>
+          <con:description>id number of product</con:description>
+        </con:parameter>
+      </con:parameters>
+      <con:method name="GET" id="ff4beabe-2dfc-4549-8160-ae236fe3100e" method="GET">
+        <con:description>Get list of all products
+</con:description>
+        <con:settings/>
+        <con:parameters>
+          <con:parameter required="true">
+            <con:name>Authorization</con:name>
+            <con:style>HEADER</con:style>
+            <con:description>Token used for authentication</con:description>
+          </con:parameter>
+        </con:parameters>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/xml</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>400</con:status>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/xml</con:mediaType>
+          <con:status>400</con:status>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>404</con:status>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/xml</con:mediaType>
+          <con:status>404</con:status>
+          <con:params/>
+        </con:representation>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/json</con:mediaType>
+          <con:params/>
+        </con:representation>
+        <con:request name="Request 1" id="af25b5d6-d1c8-4134-bd6d-ffb3d975f204" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>http://virtserver.swaggerhub.com</con:endpoint>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="/get_orders/{order_id}/" path="/get_orders/{order_id}/" id="3ea60c9f-b916-4703-b3bb-c84cd1ae0d44">
+      <con:settings/>
+      <con:parameters>
+        <con:parameter required="true">
+          <con:name>order_id</con:name>
+          <con:style>TEMPLATE</con:style>
+          <con:description>id number for each number</con:description>
+        </con:parameter>
+      </con:parameters>
+      <con:method name="GET" id="6b881079-061c-48ca-b003-e1344b14f281" method="GET">
+        <con:description>Get list of all orders for the user
+</con:description>
+        <con:settings/>
+        <con:parameters>
+          <con:parameter required="true">
+            <con:name>Authorization</con:name>
+            <con:style>HEADER</con:style>
+            <con:description>Token used for authentication</con:description>
+          </con:parameter>
+        </con:parameters>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/xml</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>400</con:status>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/xml</con:mediaType>
+          <con:status>400</con:status>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>404</con:status>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/xml</con:mediaType>
+          <con:status>404</con:status>
+          <con:params/>
+        </con:representation>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/json</con:mediaType>
+          <con:params/>
+        </con:representation>
+        <con:request name="Request 1" id="5790ade0-74d8-47f1-8fa4-d4e5dc597cf0" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>http://virtserver.swaggerhub.com</con:endpoint>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="/post_order/" path="/post_order/" id="3221259d-fe33-4e78-8505-a3ad15bc0b8d">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="POST" id="6ab39f80-d135-40da-b83d-c9ff7e65526d" method="POST">
+        <con:description>Creates a new order in DB
+</con:description>
+        <con:settings/>
+        <con:parameters>
+          <con:parameter required="true">
+            <con:name>Authorization</con:name>
+            <con:style>HEADER</con:style>
+            <con:description>Token used for authentication</con:description>
+          </con:parameter>
+        </con:parameters>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/json</con:mediaType>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/xml</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>400</con:status>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/xml</con:mediaType>
+          <con:status>400</con:status>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>404</con:status>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/xml</con:mediaType>
+          <con:status>404</con:status>
+          <con:params/>
+        </con:representation>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/json</con:mediaType>
+          <con:params/>
+        </con:representation>
+        <con:request name="Request 1" id="eb7a9143-5912-42f6-9192-a69d2e1ef800" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>http://virtserver.swaggerhub.com</con:endpoint>
+          <con:request>{ }</con:request>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:parameters/>
+          <con:parameterOrder>
+            <con:entry>Authorization</con:entry>
+          </con:parameterOrder>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="/payments/creditcard/" path="/payments/creditcard/" id="432ec4ce-3fa6-4e62-9699-b30da12ed54a">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="POST" id="c73973a0-004b-447a-84d7-dea8df4f658c" method="POST">
+        <con:description>External Service to make Creditcard payments
+</con:description>
+        <con:settings/>
+        <con:parameters>
+          <con:parameter required="true">
+            <con:name>Authorization</con:name>
+            <con:style>HEADER</con:style>
+            <con:description>Token used for authentication</con:description>
+          </con:parameter>
+        </con:parameters>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/json</con:mediaType>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>400</con:status>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>404</con:status>
+          <con:params/>
+        </con:representation>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/json</con:mediaType>
+          <con:params/>
+        </con:representation>
+        <con:request name="Request 1" id="9674b286-8ede-46d6-bd75-a11a1a22246b" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>http://virtserver.swaggerhub.com</con:endpoint>
+          <con:request>{\r
+  "id" : 33,\r
+  "action" : "placeOrdercc",\r
+  "cc_money" : 798.0,\r
+  "cc_name" : "S S",\r
+  "cc_number" : 0,\r
+  "cc_exp_mo" : 1,\r
+  "cc_exp_yr" : 2018,\r
+  "cc_cvv" : 123\r
+}</con:request>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:parameters/>
+          <con:parameterOrder>
+            <con:entry>Authorization</con:entry>
+          </con:parameterOrder>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="/payments/voucher/" path="/payments/voucher/" id="1d3f8e94-d5e8-494d-a116-178105dc0841">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="POST" id="3d849d63-5dcb-417a-8b90-bdae743c9396" method="POST">
+        <con:description>Creates a payment using voucher
+</con:description>
+        <con:settings/>
+        <con:parameters>
+          <con:parameter required="true">
+            <con:name>Authorization</con:name>
+            <con:style>HEADER</con:style>
+            <con:description>Token used for authentication</con:description>
+          </con:parameter>
+        </con:parameters>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/json</con:mediaType>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>400</con:status>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>404</con:status>
+          <con:params/>
+        </con:representation>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/json</con:mediaType>
+          <con:params/>
+        </con:representation>
+        <con:request name="Request 1" id="2946e303-2d15-44ca-a1c8-a7d09d694c6b" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>http://virtserver.swaggerhub.com</con:endpoint>
+          <con:request>{\r
+  "voucer_code" : 33,\r
+  "purchase_date" : "January 2020",\r
+  "expiry_date" : "December 2020"\r
+}</con:request>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:parameters/>
+          <con:parameterOrder>
+            <con:entry>Authorization</con:entry>
+          </con:parameterOrder>
+        </con:request>
+      </con:method>
+    </con:resource>
+  </con:interface>
+  <con:testSuite id="071d1ca6-61f4-45df-945e-60501ccb4c0b" name="Ecommerce Store TestSuite">
+    <con:description>TestSuite generated for REST Service [Ecommerce Store]</con:description>
+    <con:settings/>
+    <con:runType>SEQUENTIAL</con:runType>
+    <con:testCase id="a95ba709-28de-4ab0-8c72-e62818607f23" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="/login/ TestCase" searchProperties="true">
+      <con:description>TestCase generated for REST Resource [/login/] located at [/login/]</con:description>
+      <con:settings/>
+      <con:testStep type="restrequest" name="Request 1" id="24b40914-86a7-4b2e-8d2a-9930e349c6ab">
+        <con:settings/>
+        <con:config service="Ecommerce Store" resourcePath="/Adrians_Org/test/1.1.0/login/" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Request 1" id="ffb8deed-ae03-4842-b954-008f0c1655d1" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://virtserver.swaggerhub.com</con:endpoint>
+            <con:request/>
+            <con:originalUri>https://virtserver.swaggerhub.com/Adrians_Org/test/1.1.0/login/</con:originalUri>
+            <con:assertion type="Response SLA Assertion" id="9972e5d0-f9e1-4e76-abd7-24df31266d9b" name="Response SLA">
+              <con:configuration>
+                <SLA>250</SLA>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="Valid HTTP Status Codes" id="50411bbd-e8f6-4808-aaa5-28f913271fb5" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters>
+              <con:entry key="password" value="test"/>
+              <con:entry key="username" value="Adrian"/>
+            </con:parameters>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+    </con:testCase>
+    <con:testCase id="975c2835-63a5-4404-a389-3a71d20812cc" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="/user_details/ TestCase" searchProperties="true">
+      <con:description>TestCase generated for REST Resource [/user_details/] located at [/user_details/]</con:description>
+      <con:settings/>
+      <con:testStep type="restrequest" name="Request 1" id="979a902e-595d-4c85-b811-be7492ec2857">
+        <con:settings/>
+        <con:config service="Ecommerce Store" resourcePath="/Adrians_Org/test/1.1.0/user_details/" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Request 1" id="f04183c9-6869-4f8f-aad8-76a5dd75c38a" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://virtserver.swaggerhub.com</con:endpoint>
+            <con:request/>
+            <con:originalUri>https://virtserver.swaggerhub.com/Adrians_Org/test/1.1.0/user_details/</con:originalUri>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters>
+              <entry key="Authorization" value="1" xmlns="http://eviware.com/soapui/config"/>
+            </con:parameters>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+    </con:testCase>
+    <con:testCase id="7020348b-a94d-402a-a31d-dfa3f1297513" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="/get_products/{product_id}/ TestCase" searchProperties="true">
+      <con:description>TestCase generated for REST Resource [/get_products/{product_id}/] located at [/get_products/{product_id}/]</con:description>
+      <con:settings/>
+      <con:testStep type="restrequest" name="Request 1" id="52692a8b-d157-4dbd-9ac8-c1d5976e5930">
+        <con:settings/>
+        <con:config service="Ecommerce Store" resourcePath="/Adrians_Org/test/1.1.0/get_products/{product_id}/" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Request 1" id="af25b5d6-d1c8-4134-bd6d-ffb3d975f204" mediaType="application/json">
+            <con:settings/>
+            <con:endpoint>http://virtserver.swaggerhub.com</con:endpoint>
+            <con:request/>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+    </con:testCase>
+    <con:testCase id="3cb35db3-561d-47e9-a743-487e13600236" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="/get_orders/{order_id}/ TestCase" searchProperties="true">
+      <con:description>TestCase generated for REST Resource [/get_orders/{order_id}/] located at [/get_orders/{order_id}/]</con:description>
+      <con:settings/>
+      <con:testStep type="restrequest" name="Request 1" id="0c5ec030-6119-457c-9ac1-1606265a99ef">
+        <con:settings/>
+        <con:config service="Ecommerce Store" resourcePath="/Adrians_Org/test/1.1.0/get_orders/{order_id}/" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Request 1" id="5790ade0-74d8-47f1-8fa4-d4e5dc597cf0" mediaType="application/json">
+            <con:settings/>
+            <con:endpoint>http://virtserver.swaggerhub.com</con:endpoint>
+            <con:request/>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+    </con:testCase>
+    <con:testCase id="2370e5d5-8577-4955-b56a-72b2713bf42f" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="/payments/creditcard/ TestCase" searchProperties="true">
+      <con:description>TestCase generated for REST Resource [/payments/creditcard/] located at [/payments/creditcard/]</con:description>
+      <con:settings/>
+      <con:testStep type="restrequest" name="Request 1" id="8f3b9627-2fe6-4745-9557-39e03c5759d0">
+        <con:settings/>
+        <con:config service="Ecommerce Store" resourcePath="/Adrians_Org/test/1.1.0/payments/creditcard/" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Request 1" id="9674b286-8ede-46d6-bd75-a11a1a22246b" mediaType="application/json">
+            <con:settings/>
+            <con:endpoint>http://virtserver.swaggerhub.com</con:endpoint>
+            <con:request>{\r
+  "id" : 33,\r
+  "action" : "placeOrdercc",\r
+  "cc_money" : 798.0,\r
+  "cc_name" : "S S",\r
+  "cc_number" : 0,\r
+  "cc_exp_mo" : 1,\r
+  "cc_exp_yr" : 2018,\r
+  "cc_cvv" : 123\r
+}</con:request>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:parameters/>
+            <con:parameterOrder>
+              <con:entry>Authorization</con:entry>
+            </con:parameterOrder>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+    </con:testCase>
+    <con:testCase id="a48b06d2-4075-4f52-b9da-d1b854d3d5f9" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="/logout/ TestCase" searchProperties="true">
+      <con:description>TestCase generated for REST Resource [/logout/] located at [/logout/]</con:description>
+      <con:settings/>
+      <con:testStep type="restrequest" name="Request 1" id="bbf764a5-52ff-47a2-8c2c-893b26e1c12b">
+        <con:settings/>
+        <con:config service="Ecommerce Store" resourcePath="/Adrians_Org/test/1.1.0/logout/" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Request 1" id="37de8654-6f2f-4c9a-b02d-5bb25ca11137" mediaType="application/json">
+            <con:settings/>
+            <con:endpoint>http://virtserver.swaggerhub.com</con:endpoint>
+            <con:request/>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+    </con:testCase>
+    <con:properties/>
+    <con:reportParameters/>
+  </con:testSuite>
+  <con:properties/>
+  <con:wssContainer/>
+  <con:databaseConnectionContainer/>
+  <con:jmsConnectionContainer/>
+  <con:oAuth2ProfileContainer/>
+  <con:oAuth1ProfileContainer/>
+  <con:reporting>
+    <con:xmlTemplates/>
+    <con:parameters/>
+  </con:reporting>
+  <con:sensitiveInformation/>
+  <con:authRepository/>
+  <con:tags/>
+</con:soapui-project>
